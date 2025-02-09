@@ -29,10 +29,10 @@ const Header = () => {
   const toggleDrawer = (open) => () => setDrawerOpen(open);
 
   const sections = [
-    {
-      text: "About",
-      path: "/about",
-    },
+    // {
+    //   text: "About",
+    //   path: "/about",
+    // },
     // {
     //   text: "Ανακοινώσεις",
     //   path: "/general",

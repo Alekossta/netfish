@@ -1,4 +1,6 @@
 import { Box, Typography } from "@mui/material";
+import Game from "../components/Game";
+import DonateBoard from "../components/DonateBoard";
 
 export default function Home()
 {
@@ -7,28 +9,20 @@ export default function Home()
         <Box sx={{
             display: "flex",
             flexDirection: "column",
+            justifyContent: "center",
             padding: "2rem",  
             gap: "1rem", 
-            backgroundImage: "url('/image.png')",
-            backgroundSize: "cover", // Ensures it covers the box
-            backgroundPosition: "center", // Centers the image
+            // backgroundImage: "url('/image.png')",
+            // backgroundSize: "cover", // Ensures it covers the box
+            // backgroundPosition: "center", // Centers the image
             height: "90vh"
         }} >
-            <Box
-                sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    borderRadius: 8,
-                    padding: "2rem",
-                }}
-            >
-                <Typography variant="h1" sx={{alignSelf: "center"}}>
-                    Welcome to Netfish 👋
-                </Typography>
-                <Typography sx={{fontSize: "1.75em", alignSelf: "center"}}>
-                    Making environmental education more fun 🎉
-                </Typography>
-            </Box>
+            <Typography variant="h1" sx={{alignSelf: "center"}}>
+                Welcome to Netfish 👋
+            </Typography>
+            <Typography sx={{fontSize: "1.75em", alignSelf: "center"}}>
+                Making environmental education more fun 🎉
+            </Typography>
         </Box>
         <Box sx={{
             display: "flex",
@@ -36,9 +30,6 @@ export default function Home()
             paddingX: "3rem",
             minHeight: "100vh",
             paddingY: "2rem",
-            backgroundImage: "url('/back_caustics.png')",
-            backgroundSize: "cover", // Ensures it covers the box
-            backgroundPosition: "center", // Centers the image
         }} >
             <Box sx={{display: "flex", flexDirection: "column", gap: "2rem"}}>
                 <Typography sx={{alignSelf: "flex-start", fontSize: "2em", width: "50%"}}>
@@ -64,9 +55,9 @@ export default function Home()
             paddingX: "3rem",
             minHeight: "100vh",
             paddingY: "2rem",
-            backgroundImage: "url('/back_caustics.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            // backgroundImage: "url('/back_caustics.png')",
+            // backgroundSize: "cover",
+            // backgroundPosition: "center",
         }} >
             <Typography variant="h2">
                 About the game
@@ -74,10 +65,7 @@ export default function Home()
             <Box
                 sx={{
                     marginTop: "2rem",
-                    borderRadius: 5,
-                    color: "white",
                     padding: "2rem",
-                    background: "linear-gradient(to bottom, rgba(151, 151, 151, 0.7), rgba(50, 50, 50, 0.8));"
                 }}
             >
                 <Typography sx={{fontSize: "2em"}}>
@@ -90,30 +78,37 @@ export default function Home()
         <Box sx={{
             display: "flex",
             flexDirection: "column",
-            paddingX: "3rem",
             minHeight: "100vh",
-            paddingY: "2rem",
-            backgroundImage: "url('/back_caustics.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            // backgroundImage: "url('/calmSee.jpg')",
+            // backgroundSize: "cover",
+            // backgroundPosition: "center",
         }} >
-            <Typography>
-                The Game
-            </Typography>
+            <Game/>
         </Box>
         <Box sx={{
             display: "flex",
             flexDirection: "column",
+            gap: "2rem",
             paddingX: "3rem",
             minHeight: "100vh",
             paddingY: "2rem",
-            backgroundImage: "url('/back_caustics.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            // backgroundImage: "url('/back_caustics.png')",
+            // backgroundSize: "cover",
+            // backgroundPosition: "center",
         }} >
-            <Typography>
-                Donate
+            <Typography variant="h1">
+                Make a difference
             </Typography>
+            <Typography sx={{fontSize: "2em"}}>
+                Every penny counts!
+            </Typography>
+            <Box sx={{display: "flex", justifyContent: "space-around"}}>
+                <DonateBoard name="Reclaiming Paradise" link={"https://www.gofundme.com/f/thebalicleanup"}
+                 description={"Bali is under threat. Over the years, the rapid increase in tourism, urbanization, and economic activities has led to a dramatic rise in plastic consumption and waste generation on the island. Unfortunately, inadequate waste management infrastructure and improper disposal practices have contributed to the accumulation of plastic waste in Bali's environment, including its beaches, oceans, forests, jungle and urban areas."}/>
+                <DonateBoard link={"https://theoceancleanup.com/"} name="Ocean Cleanup" description={"With your help, we can work towards a future where plastic no longer pollutes our oceans. This is possible by cleaning up what is already out there, and stopping plastic on its way to the ocean via rivers. We are currently cleaning up in the Great Pacific Garbage Patch, as well as working on more river Interceptor deployments in some of the world’s most polluted rivers."}/>
+                <DonateBoard name="Seven Clean Seas" description={"At Seven Clean Seas, our philosophy embodies a holistic approach to combating plastic pollution, intertwining environmental restoration with social empowerment. Beyond removing plastic debris, we believe in generating fairly paid formal jobs to uplift impacted coastal communities and nurture a sense of environmental stewardship."} link={"https://www.sevencleanseas.com/contribute"}/>
+            </Box>
+
         </Box>
     </Box>
 }
